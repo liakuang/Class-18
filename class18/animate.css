@@ -21,7 +21,7 @@ Copyright (c) 2013 Daniel Eden
 
 .animated.hinge {
   -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
 @-webkit-keyframes bounce {
