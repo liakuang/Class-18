@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animations</title>
+</head>
+<body>
+  <span class="shootingStar">&#9732;</span>
+  <span class="shootingStar2">&#9732;</span>
+
+  <style>
+    body {
+      background:black;
+    }
+
+   .shootingStar {
+      
+      color:yellow;
+      font-size:50px;
+      font-weight: bold;
+      position: absolute;
+      -webkit-transform:rotate(192deg);
+       /* apply the animation */
+      -webkit-animation:shoot 3s linear infinite;
+    }
+
+    @-webkit-keyframes shoot {
+      0% {
+        top:100%;
+        left:0;
+      }
+      100% {
+        top:0;
+        left:100%;
+      }
+    }
+
+      /* a second shooting star */
+
+      .shootingStar2{
+        color:white;
+        font-size:30px;
+        font-weight:bold;
+        position:absolute;
+        -webkit-transform:rotate(45deg);
+        -webkit-animation:shootTwo 3s linear infinite;
+        
+      }
+      /* need to name the animation with a different name than "shoot" */
+      @-webkit-keyframes shootTwo{
+        0% {
+          top:100%;
+          right:0;
+        }
+        50% {
+          transform: scale(1.5) rotate(45deg); 
+          /* need to key the rotate also when have the scale or else it will change the rotation */
+          color:pink;
+        }
+        100% {
+          top:0;
+          right:100%;
+        }
+      }
+  </style>
+</body>
+</html>

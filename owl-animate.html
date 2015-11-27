@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>owl-animate</title>
+  <style type="text/css">
+  .owl{
+  	height:307px;
+  	width:210px; /* =3570/17 */
+  	background-image:url(http://f.cl.ly/items/1k0J3u2Y2t2W171T2z0A/fly_owl.png);
+  	animation: flap 1s steps(17) infinite, fly 10s infinite; /* telling the animation to take the steps to do (3570/17) */
+  	position:absolute;
+  }
+  @keyframes flap{
+  	0%{
+  		background-position: 0;
+  	}
+  	100%{
+  		background-position: -3570px;
+  	}
+  }
+  @keyframes fly{
+  	0%{
+  		left:0;
+  	}
+  	
+  	50%{
+  		left:50%;
+  		bottom:0;
+  	}
+  	100%{
+  		left:100%;
+  	}
+
+  }
+  </style>
+
+</head>
+<body>
+<div class="owl"></div>
+</body>
+</html>
